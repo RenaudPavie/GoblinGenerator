@@ -13,23 +13,29 @@
 
     const nb_gobelin = 10;
     let gobelins = {
-      nom: function () {
+      nom: '',
+      getName:function(){
 
       },
-      sexe: function () {
+      sexe:'',
+      getSexe:function () {
 
       },
-      age: function () {
+      age: Math.floor(Math.random() * 31) + 5,
+      getAge: function () {
+        console.log('age')
+        return this.age;
+      },
+      dents:'',
+      getDents:function(){
 
       },
-      dents: function () {
-
-      }
+      
     };
 
     // votre code ici
 
-    console.log(gobelins);
+    console.log(gobelins.getAge());
 
   </script>
 </body>
