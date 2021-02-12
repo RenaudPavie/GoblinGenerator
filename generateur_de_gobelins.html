@@ -12,30 +12,23 @@
   <script>
 
     const nb_gobelin = 10;
-    let gobelins = {
-      nom: '',
-      getName:function(){
+    let gobelins = [];
 
-      },
-      sexe:'',
-      getSexe:function () {
 
-      },
-      age: Math.floor(Math.random() * 31) + 5,
-      getAge: function () {
-        console.log('age')
-        return this.age;
-      },
-      dents:'',
-      getDents:function(){
+    for (i = 0 ; i < nb_gobelin ; i++) {
+        gobelin = {
+          age:getRandomNumberBetweenMinMaxValue(5,35);
+          dents:getRandomNumberBetweenMinMaxValue(17,28);
+          sexe:getRandomNumberBetweenMinMaxValue(5,35);
+        }
+    }
 
-      },
-      
-    };
 
-    // votre code ici
-
-    console.log(gobelins.getAge());
+    function getRandomNumberBetweenMinMaxValue (min,max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    // console.log(gobelins.age);
+    // console.log(gobelins.dents);
 
   </script>
 </body>
